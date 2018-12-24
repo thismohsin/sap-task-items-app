@@ -2,7 +2,7 @@
 This serivce is microservice, provide ability to post Item i.e, event(id, timestamp). This Service does not have any external data store, uses memory cache. This service is designed to return items posted in last Nth seconds or last N item posted, which ever is greater.
 
 # Item Cache Information
-Given the requirement for high throughput and accessibility of element in order, I considered using ConcurrentSkipListMap. The map is sorted in natural order of key or comparator passed which addresses usecase for linear access in addition to concurrency. Eventhough the complexity of this map is O(log n) as compared to ConcurrentHashMap, this map implement ConcurrentNavigableMap which adds extensive ability to work with map for given usecase.
+Given the requirement for high throughput and accessibility of element in order, I considered using ConcurrentSkipListMap. The map is sorted in natural order of key or comparator passed which addresses usecase for ordered access in addition to concurrency. Eventhough the complexity of this map is O(log n) as compared to ConcurrentHashMap, this map support concurrency and implement ConcurrentNavigableMap which adds extensive ability to work with map for given usecases.
 In addition to using right datastructure, handling cache eviction for better memory foot print is essential. There are multiple approach to handle eviction ie., expireAfterInterval, expireLRU or expireAfterAccess etc. I considered CacheManager which spawn scheduled thread to evaluate high memory usage and then start eviction of configured percentage of total elements from cache in FIFO order such that oldest element will be removed first. 
 
 ## Getting Started
