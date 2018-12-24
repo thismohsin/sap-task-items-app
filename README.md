@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 git clone https://github.com/thismohsin/sap-task-items-app.git
 ```
 ##  Running the build and tests
-- Demo-able test to verify functionality. 
+- Demo-able unit test to verify functionality, specifically the two unit-test listed below.
 - Coverage Details: Class (95%), Method(90%), Line (92%) 
 ####  Unit Test:
 ```
@@ -35,8 +35,7 @@ java -jar build\libs\sap-task-items-app-1.0.0.jar
 ```
 
 #### REST API
-POST /items
-Response code: 201 Created
+POST /items <br/> Content-Type: application/json <br/> Response code: 201 Created
 ```
 {
         "item": {
@@ -45,8 +44,7 @@ Response code: 201 Created
         }
 }
 ```
-GET /items
-Response Code: 200 OK
+GET /items <br/> Response Code: 200 OK
 ```
 [
     {
