@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 git clone https://github.com/thismohsin/sap-task-items-app.git
 ```
 ##  Running the build and tests
-- Demo-able test to verify functionality. 
+- Demo-able unit test to verify functionality, specifically the two unit-test listed below.
 - Coverage Details: Class (95%), Method(90%), Line (92%) 
 ####  Unit Test:
 ```
