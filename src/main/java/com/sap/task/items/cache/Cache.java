@@ -10,8 +10,8 @@ import com.sap.task.items.domain.ItemDetail;
 
 /**
  * This is light-weight, thread safe Item Cache {@link CacheImpl} implemented using {@link ConcurrentSkipListMap}
- * ConcurrentSkipListMap has complexity of O(log(n)) as compared to other Maps however as it implements {@link ConcurrentNavigableMap}
- * it gives more navigational ability required for our use-case.
+ * ConcurrentSkipListMap has complexity of O(log(n)), supports for concurrency and implements {@link ConcurrentNavigableMap}
+ * that gives more navigational ability required for our use-case.
  *
  * When object is added to Item Cache, the key {@link ZonedDateTime} will inserted in descending order.
  * By doing this it gives us ability to read or navigate faster using {@link java.util.NavigableMap}.
