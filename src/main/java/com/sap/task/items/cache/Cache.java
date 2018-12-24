@@ -30,9 +30,9 @@ public interface Cache
 
 
 	/**
-	 * Evict item from cache.
+	 * Evict last N item from cache.
 	 *
-	 * @param nthElement key, nth element to be removed, not null.
+	 * @param nthElement key, last N element to be removed, not null.
 	 */
 	void evict(Integer nthElement);
 
