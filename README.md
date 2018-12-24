@@ -65,6 +65,6 @@ GET /items <br/> Response Code: 200 OK
 ## Built With
 * Java
 * SpringFramework
-* Gradle
 * Junit and Mockito
+* Gradle
 
