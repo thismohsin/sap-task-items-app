@@ -26,8 +26,10 @@ public final class CacheImpl implements Cache
 {
 	/**
 	 * Item cache, ordering key in descending while insertion. [zdt5, zdt4, zdt3... zdt1]
+	 * Note: I have used Spring Constructor Autowiring for registering all beans.
+	 * This ensures that the spring bean dependency object graph will initialize this first and once, hence not static.
 	 */
-	private final ConcurrentSkipListMap<ZonedDateTime, ItemDetail> ITEMS =
+	private  final ConcurrentSkipListMap<ZonedDateTime, ItemDetail> ITEMS =
 			new ConcurrentSkipListMap<>((zdt1, zdt2) -> Long.compare(zdt2.toInstant().toEpochMilli(), zdt1.toInstant().toEpochMilli()));
 
 
