@@ -40,8 +40,10 @@ public final class CacheManager
 		this.percentageOfCacheEviction = percentageOfCacheEviction;
 	}
 
-
-	@Scheduled(fixedDelay = 300)
+	/**
+	 * Spring scheduler will invoke this task after every 5 min.
+	 */
+	@Scheduled(fixedDelay = 300000)
 	public void evictionPolicy()
 	{
 		if (evictionRule())
