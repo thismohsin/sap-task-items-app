@@ -35,8 +35,7 @@ java -jar build\libs\sap-task-items-app-1.0.0.jar
 ```
 
 #### REST API
-POST /items
-Response code: 201 Created
+POST /items <br/> Content-Type: application/json <br/> Response code: 201 Created
 ```
 {
         "item": {
@@ -45,8 +44,7 @@ Response code: 201 Created
         }
 }
 ```
-GET /items
-Response Code: 200 OK
+GET /items <br/> Response Code: 200 OK
 ```
 [
     {
