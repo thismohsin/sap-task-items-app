@@ -11,8 +11,8 @@ import com.sap.task.items.domain.ItemDetail;
 
 
 /**
- * Standalone implementation using {@link ConcurrentHashMap} and {@link LinkedList}
- * This class can be put to test using {@link CacheTest}
+ * This is alternate standalone implementation using {@link ConcurrentHashMap} and {@link LinkedList}
+ * This class can be put to test using {@link CacheTest} by changing implementation instance to this class.
  *
  * @author mk
  */
