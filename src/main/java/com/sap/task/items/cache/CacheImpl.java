@@ -16,7 +16,7 @@ import com.sap.task.items.domain.ItemDetail;
  *
  * When object is added to Item Cache, the key {@link ZonedDateTime} will inserted in descending order.
  * By doing this it gives us ability to read or navigate faster using {@link java.util.NavigableMap}.
- * [zdt(n), zdt(n-1), zdt(n-1)... zd(0)]
+ * [zdt(n), zdt(n-1), zdt(n-2)... zd(0)]
  *
  * @author mk
  */
